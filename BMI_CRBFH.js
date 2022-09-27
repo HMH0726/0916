@@ -1,4 +1,4 @@
-//Normal
+//Calculate Recommended BMI From Height.
 
 const RLS = require("readline-sync");
 
