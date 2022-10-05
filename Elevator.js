@@ -12,8 +12,36 @@ do {
 //TopFloor >= TargetFloor >= BottomFloor
 if ( TargetFloor >= BottomFloor && TargetFloor <= TopFloor ) {
     console.log("Valid");
+
+    if(TargetFloor < CurrentFloor){
+        
+        //Down
+        console.log("Move Down......");
+        while (TargetFloor<CurrentFloor) {
+            CurrentFloor--;
+            console.log("Elevator Now At"+ CurrentFloor);
+        }
+
+    }else if(TargetFloor > CurrentFloor){
+        
+        //Up
+        console.log("Move Up......");
+        while (TargetFloor>CurrentFloor) {
+            CurrentFloor++;
+            console.log("Elevator Now At"+ CurrentFloor);
+        }
+
+    }else if(TargetFloor == CurrentFloor){
+        
+        //
+        console.log("Huh?");
+        break;
+    }
+
+
 } else {
     console.log("Invalid");
+    continue;
 }
 
 
