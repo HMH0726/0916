@@ -3,7 +3,20 @@
 //Recommended BMI 18.5 ≤ BMI < 24
 const RLS = require("readline-sync");
 
-var height = RLS.question("Enter Your Height");
+//var height = RLS.question("Enter Your Height");
+
+
+
+while (true) {
+    var height = RLS.question("Ur height?");
+    if (isNaN(height) || height < 10 || height > 220) {
+        console.log("Please Enter Your Height Between 10 And 200");
+        break;
+    }
+}
+
+
+
 console.log("===================================");
 console.log("Your Height = "+height);
 
@@ -18,10 +31,3 @@ console.log("===================================");
 // BMI = 體重(公斤) / 身高2(公尺2)
 
 
-while (true) {
-    var height = readline.question("Ur height?");
-    if (isNaN(height) || height < 10 || height > 220) {
-        console.log("Please Enter Your Height Between 10 And 200");
-        break;
-    }
-}
