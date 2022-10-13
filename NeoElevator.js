@@ -58,9 +58,9 @@ if (FloorName.indexOf(TargetFloor) - FloorName.indexOf(CurrentFloor) >0){
 }else{
 
     console.log("Move Down");
-    while (     CurrentFloor     ==  TargetFloor        ) {
-        CurrentFloor--;
-        console.log("#Elevator Now At "+ CurrentFloor );
+    while (     CurrentFloor     !=  TargetFloor        ) {
+        FloorName.indexOf(CurrentFloor--);
+        console.log("#Elevator Now At "+ FloorName.indexOf(CurrentFloor) );
     }
 
     console.log("Arrive!");
