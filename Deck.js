@@ -24,7 +24,7 @@ let deck = [];
 // create a deck of cards
 for (let i = 0; i < suits.length; i++) {
     for (let x = 0; x < values.length; x++) {
-        let card = { Value: values[x], Suit: suits[i], File: values[x]+"_of_"+suits };
+        let card = { Value: values[x], Suit: suits[i], File: values[x]+"_of_"+suits[i]+".png" };
         deck.push(card);
     }
 }
@@ -45,5 +45,6 @@ console.log('The first five cards are:');
 
 // display 5 results
 for (let i = 0; i < 5; i++) {
-    console.log(`${deck[i].Suit} ${deck[i].Value}`)
+    console.log(`${deck[i].Value} of ${deck[i].Suit}`)
+    document.getElementById("card"+1).src = "Resources/PlayingCards/"+deck[i].File;
 }
